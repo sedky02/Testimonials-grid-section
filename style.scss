@@ -1,0 +1,111 @@
+$font: 'Barlow Semi Condensed', sans-serif;
+$ModerateViolet: hsl(263, 55%, 52%);
+$grayishBlue:hsl(217, 19%, 35%);
+$blackishBlue:hsl(219, 29%, 14%);
+$lightGrey:hsl(0, 0%, 81%);
+$lightGrayishBlue:hsl(210, 46%, 95%);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 13px;
+    font-family: $font;
+    background-color: $lightGrayishBlue;
+    
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 85vw;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.s1{
+    grid-column:1/3 ;
+    background-color: $ModerateViolet;
+    p{
+        color: white;
+    }
+}
+.s2{
+    background-color: $grayishBlue;
+    color: white;
+    p{
+        color: white;
+    }
+    
+}
+.s2, .s1 , .s5{
+    .profile{
+        p{
+            color: white;
+        }
+    }
+}
+.s3{
+    grid-column: 4/5;
+    grid-row: 1/3;
+    
+}
+.s4, .s3{
+    background-color: white;
+    color: $grayishBlue;
+}
+.s5{
+    grid-column:2/4 ;
+    background-color: $blackishBlue;
+    p{
+        color: white;
+    }
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    .profile{
+
+        width: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        align-self: flex-start;
+        margin-bottom:1rem ;
+        img{
+            border-radius: 50%;
+            margin-right: 1.5rem;
+            zoom: 70%;
+        }
+        p{
+            color: $grayishBlue;
+            opacity: 0.5;
+        }
+
+    }
+    h1{
+        margin-bottom:1rem ;
+
+    }
+    p{
+        color:$grayishBlue;
+        opacity: 70%;
+        line-height: 150%;
+        font-size: 13px;
+        margin-bottom:0rem ;
+        padding-right: -1rem;
+    }
+    line-height: 200%;
+    padding: 1rem 2rem;
+    padding-right: 2rem;
+    color: white;
+    background-color: $lightGrey;
+    border-radius: 10px;
+}
